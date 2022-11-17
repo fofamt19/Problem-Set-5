@@ -5,7 +5,7 @@ import java.awt.*;
 public class Ball {
     double xVel, yVel, x, y;
 
-
+//
     public Ball(){
      x = 350;
      y = 250;
