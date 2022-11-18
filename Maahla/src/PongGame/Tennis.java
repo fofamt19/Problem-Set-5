@@ -16,8 +16,8 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
     Graphics gfx;
     Image img;
 
-    public void Tennis() {
-        this.resize(WIDTH, HEIGHT);
+    /*public void Tennis() {
+        this.setSize(WIDTH, HEIGHT);
         gameStarted = false;
         this.addKeyListener(this);
         p1 = new HumanPaddle(1);
@@ -27,9 +27,17 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
         gfx = img.getGraphics();
         thread = new Thread(this);
         thread.start();
+    }*/
+
+    public Tennis() {
+        tennis = new Tennis();
+        this.setSize(WIDTH, HEIGHT);
+        this.setTitle("Tennis Game");
+        this.setVisible(true);  // Needed here for Graphics to work properly
+        this.addKeyListener(this);
     }
 
-    public void paint (Graphics g) {
+    /*public void paint (Graphics g) {
         gfx.setColor(Color.blue);
         gfx.fillRect(0,0,WIDTH, HEIGHT);
         if(b1.getX() < -10 || b1.getX() > 710){
@@ -49,6 +57,12 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
         }
         g.drawImage(img, 0, 0, this);
 
+    }*/
+
+    public void paint(Graphics g) {
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, WIDTH, HEIGHT);
+        tennis.draw(g);
     }
 
     public void update (Graphics g){
@@ -102,6 +116,10 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
 
             }
         }
+    public static void main(String[] args) {
+        Tennis game = new Tennis();
+        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 
 
     }
