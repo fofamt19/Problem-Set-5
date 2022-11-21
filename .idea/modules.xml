@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Alantis Green/Alantis Green.iml" filepath="$PROJECT_DIR$/Alantis Green/Alantis Green.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alantis/Alantis.iml" filepath="$PROJECT_DIR$/Alantis/Alantis.iml" />
       <module fileurl="file://$PROJECT_DIR$/Group/Group.iml" filepath="$PROJECT_DIR$/Group/Group.iml" />
       <module fileurl="file://$PROJECT_DIR$/Maahla-2/Maahla-2.iml" filepath="$PROJECT_DIR$/Maahla-2/Maahla-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Murren Kelly/Murren Kelly.iml" filepath="$PROJECT_DIR$/Murren Kelly/Murren Kelly.iml" />
