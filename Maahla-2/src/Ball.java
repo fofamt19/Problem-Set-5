@@ -6,18 +6,15 @@ public class Ball {
     double xVel, yVel, x, y;
     int r;
 
+
 //
     public Ball(){
      x = 350;
      y = 250;
      xVel = getRandomSpeed() * getRandomDirection();
      yVel = getRandomSpeed() * getRandomDirection();
-     r = 1;
     }
 
-    public void setRandomBound (int bound){
-        r = bound;
-    }
 
     public double getRandomSpeed (){
         return (Math.random() * r + 2);
