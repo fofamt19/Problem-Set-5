@@ -71,6 +71,6 @@ public class Ball {
 
 
     public int getY() {
-        return (int)getY();
+        return (int)y;
     }
 }
