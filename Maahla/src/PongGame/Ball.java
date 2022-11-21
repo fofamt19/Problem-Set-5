@@ -4,17 +4,23 @@ import java.awt.*;
 
 public class Ball {
     double xVel, yVel, x, y;
+    int r;
 
 //
     public Ball(){
      x = 350;
      y = 250;
-     xVel = getRandomeSpeed() * getRandomDirection();
-     yVel = getRandomeSpeed() * getRandomDirection();
+     xVel = getRandomSpeed() * getRandomDirection();
+     yVel = getRandomSpeed() * getRandomDirection();
+     r = 1;
     }
 
-    public double getRandomeSpeed (){
-        return (Math.random() * 3 + 2);
+    public void setRandomBound (int bound){
+        r = bound;
+    }
+
+    public double getRandomSpeed (){
+        return (Math.random() * r + 2);
     }
 
     public int  getRandomDirection(){
