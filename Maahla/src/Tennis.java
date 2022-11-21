@@ -7,8 +7,6 @@
  * @acknowledgement: FULL NAME(S) OF YOUR COLLABORATOR(S)
  ***********************************************************************/
 
-package PongGame;
-
 
 import javax.swing.*;
 import java.awt.*;
@@ -81,12 +79,12 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
                 b1.move();
                 b1.checkPaddleCollision(p1, p2);
             }
-                repaint();
+            repaint();
 
             try{
                 Thread.sleep(10);
             } catch (InterruptedException e) {
-             e.printStackTrace();
+                e.printStackTrace();
             }
         }
 
@@ -103,29 +101,25 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
             p1.setDownAccel(true);
         } else if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             gameStarted = true;
-            
+
         }
     }
 
     public void keyReleased(KeyEvent e) {
-         if (e.getKeyCode() == KeyEvent.VK_UP){
-             p1.setUpAccel(false);
+        if (e.getKeyCode() == KeyEvent.VK_UP){
+            p1.setUpAccel(false);
 
-            } else if (e.getKeyCode() == KeyEvent.VK_DOWN){
-                p1.setDownAccel(false);
+        } else if (e.getKeyCode() == KeyEvent.VK_DOWN){
+            p1.setDownAccel(false);
 
-            }
         }
+    }
     public void keyTyped(KeyEvent e) {
 
     }
-    public static void main(String[] args) {
-        Tennis game = new Tennis();
-        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
 
 
-    }
+}
 
 
 
