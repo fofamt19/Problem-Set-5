@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Menu extends JFrame {
     private JButton bEasy;
@@ -20,9 +18,7 @@ public class Menu extends JFrame {
 //        f.setSize(400,400);
 //        f.setLayout(null);
 //        f.setVisible(true);
-           bEasy.addActionListener(e -> buttonAction(0));
-
-
+//        bEasy.addActionListener(click);
 
         bMedium =new JButton("Medium");
         panel.add(bMedium);
@@ -32,7 +28,7 @@ public class Menu extends JFrame {
 //        f.setLayout(null);
 //        f.setVisible(true);
 //        bMedium.addActionListener(click);
-        bMedium.addActionListener(e -> buttonAction(1));
+
         bHard =new JButton("Hard");
         panel.add(bHard);
         panel.add(Box.createRigidArea(new Dimension(10, 0)));
@@ -41,20 +37,8 @@ public class Menu extends JFrame {
 //        f.setLayout(null);
 //        f.setVisible(true);
 //        bHard.addActionListener(click);
-        bHard.addActionListener(e -> buttonAction(2));
         this.add(panel);
         this.pack();
         this.setVisible(true);
     }
-    public void buttonAction(int level){
-        System.out.println("A button was pressed");
-        MainClass.level = level;
-        setVisible(false);
-        dispose();
-        Tennis game = new Tennis(level);
-        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
-    }
 }
-
