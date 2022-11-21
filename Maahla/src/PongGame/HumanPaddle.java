@@ -11,10 +11,12 @@ public class HumanPaddle implements Paddle{
      public HumanPaddle (int player){
          upAccel = false; downAccel = false;
          y = 210; yVel = 0;
-         if (player == 1)
+         if(player == 1) {
              x = 20;
-         else
+         }
+         else {
              x = 660;
+         }
 
 
      }
@@ -26,31 +28,35 @@ public class HumanPaddle implements Paddle{
 
 
     public void move() {
-         if (upAccel){
+         if(upAccel){
              yVel -= 2;
              
          } 
-         else if (downAccel) {
+         else if(downAccel) {
              yVel += 2;
-             
+
          }
-         else if (!upAccel && !downAccel) {
+         else if(!upAccel && !downAccel) {
              yVel *= GRAVITY;
              
          }
          
-         if(yVel >= 5)
+         if(yVel >= 5) {
              yVel = 5;
-         else if (yVel <= -5)
+         }
+         else if (yVel <= -5) {
              yVel = -5;
+         }
 
         y += yVel;
 
-        if(y < 0)
+        if(y < 0) {
             y = 0;
+        }
 
-        if(y > 420)
+        if(y > 420) {
             y = 420;
+        }
 
     }
 

@@ -1,3 +1,12 @@
+/**********************************************************************
+ * @file TENNIS.java
+ * @brief BRIEF DESCRIPTION OF ANY PROBLEMS YOU MAY HAVE
+ *. HAD. RESULTS OF YOUR RANDOM WALK SIMULATIONS
+ * @author MAAHLA FOFACK
+ * @date:  11.20.22
+ * @acknowledgement: FULL NAME(S) OF YOUR COLLABORATOR(S)
+ ***********************************************************************/
+
 package PongGame;
 
 
@@ -13,7 +22,8 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
     AIPaddle p2;
     Ball b1;
     boolean gameStarted;
-    Image img;
+
+
 
     public Tennis() {
         this.setSize(WIDTH, HEIGHT);
@@ -22,7 +32,8 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
         p1 = new HumanPaddle(1);
         b1 = new Ball();
         p2 = new AIPaddle(2, b1);
-        img = createImage(WIDTH, HEIGHT);
+
+        this.setTitle("Pong Game");
         this.setVisible(true);
         thread = new Thread(this);
         thread.start();
@@ -40,6 +51,10 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
             b1.draw(g);
             p2.draw(g);
         }
+
+        p1.draw(g);
+        b1.draw(g);
+        p2.draw(g);
 
         if(!gameStarted){
             g.setColor(Color.WHITE);
@@ -59,28 +74,26 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
 
 
     public void run() {
-        for(;;){
+        for (;;){
             if(gameStarted) {
                 p1.move();
                 p2.move();
                 b1.move();
-                b1.checkPaddleCollision(p1, p1);
+                b1.checkPaddleCollision(p1, p2);
             }
+                repaint();
 
-            repaint();
-            try {
+            try{
                 Thread.sleep(10);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+             e.printStackTrace();
             }
         }
 
 
     }
 
-    public void keyTyped(KeyEvent e) {
 
-    }
 
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP) {
@@ -103,6 +116,9 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
 
             }
         }
+    public void keyTyped(KeyEvent e) {
+
+    }
     public static void main(String[] args) {
         Tennis game = new Tennis();
         game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -110,8 +126,7 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
 
 
     }
-    //add: setthis.Visible(true); under the p"ublic tennis" in the video make it public tennis not public in it
-  //keep the G's
+
 
 
 
