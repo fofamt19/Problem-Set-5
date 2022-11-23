@@ -28,36 +28,30 @@ public class HumanPaddle implements Paddle{
 
 
     public void move() {
-         if(upAccel){
-             yVel -= 2;
-             
-         } 
-         else if(downAccel) {
-             yVel += 2;
+        if(upAccel){
+            yVel -= 2;
+        }
+        else if(downAccel){
+            yVel += 2;
+        }
+        else if(!upAccel && !downAccel){
+            yVel *= GRAVITY;
+        }
 
-         }
-         else if(!upAccel && !downAccel) {
-             yVel *= GRAVITY;
-             
-         }
-         
-         if(yVel >= 5) {
-             yVel = 5;
-         }
-         else if (yVel <= -5) {
-             yVel = -5;
-         }
-
+        if(yVel >= 5){
+            yVel = 5;
+        }
+        else if(yVel <= -5){
+            yVel = -5;
+        }
         y += yVel;
 
-        if(y < 0) {
+        if (y < 0){
             y = 0;
         }
-
-        if(y > 420) {
+        if(y > 420){
             y = 420;
         }
-
     }
 
     public void setUpAccel (boolean input){
