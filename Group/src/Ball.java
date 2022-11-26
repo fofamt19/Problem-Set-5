@@ -7,17 +7,14 @@ public class Ball {
     int r;
 
 //
-    public Ball(){
+    public Ball(int level){
      x = 350;
      y = 250;
      xVel = getRandomSpeed() * getRandomDirection();
      yVel = getRandomSpeed() * getRandomDirection();
-     r = 1;
+     r = 2+level;
     }
 
-    public void setRandomBound (int bound){
-        r = bound;
-    }
 
     public double getRandomSpeed (){
         return (Math.random() * r + 2);
@@ -71,6 +68,6 @@ public class Ball {
 
 
     public int getY() {
-        return (int)y;
+        return (int)getY();
     }
 }

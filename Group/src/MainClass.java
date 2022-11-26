@@ -1,13 +1,13 @@
 
 
 import javax.swing.*;
-
+import java.awt.*;
 
 public class MainClass {
-
+    public static int level;
     public static void main(String[] args) {
-        Tennis game = new Tennis();
-        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Menu menu = new Menu();
+
     }
 
 }
