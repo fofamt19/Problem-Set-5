@@ -52,7 +52,7 @@ public class Ball {
         x += xVel;
         y += yVel;
 
-        if(y < 10)
+        if(y < 25)
             yVel = -yVel;
         if(y > 490)
             yVel = -yVel;
