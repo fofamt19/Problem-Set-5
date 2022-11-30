@@ -1,7 +1,7 @@
 
 /**********************************************************************
  * @file MainClass.java
- * @brief Issues with pushing and comit in GitHub
+ * @brief Issues with pushing and committing in GitHub
  * @author MAAHLA FOFACK, ALantis Green, Murren Kelly
  * @date:  11.28.22
  * @acknowledgement:MAAHLA FOFACK, ALantis Green, Murren Kelly
