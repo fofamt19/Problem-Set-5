@@ -49,10 +49,10 @@ public class Ball {
     }
 
     public void move(){
-        x =+ xVel;
+        x += xVel;
         y += yVel;
 
-        if(y < 10)
+        if(y < 25)
             yVel = -yVel;
         if(y > 490)
             yVel = -yVel;
@@ -68,6 +68,6 @@ public class Ball {
 
 
     public int getY() {
-        return (int)getY();
+        return (int)y;
     }
 }
